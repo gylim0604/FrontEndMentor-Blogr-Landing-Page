@@ -1,6 +1,9 @@
-import { Heading, Box } from '@chakra-ui/react';
 import Head from 'next/head';
-import Header from '../components/Header';
+import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
+import Section1 from '../components/Section1';
+import Section2 from '../components/Section2';
+import Section3 from '../components/Section3';
 
 export default function Home() {
     return (
@@ -14,7 +17,10 @@ export default function Home() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <Header />
-            {/* <Header /> */}
+            <Section1 />
+            <Section2 />
+            <Section3 />
+            <Footer />
         </>
     );
 }

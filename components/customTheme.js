@@ -9,7 +9,7 @@ const customTheme = extendTheme({
         white: 'hsl(0, 0%, 100%)',
         grayBlue: 'hsl(240, 2%, 79%)',
         vGrayBlue: ' hsl(207, 13%, 34%)',
-        vDarkBlue: 'hsl(240, 10%, 16%)',
+        vvDarkBlue: 'hsl(240, 10%, 16%)',
     },
     fonts: {
         // heading: 'Julius Sans One',
