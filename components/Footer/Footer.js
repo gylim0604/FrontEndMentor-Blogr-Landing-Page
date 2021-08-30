@@ -11,6 +11,7 @@ function Footer() {
             px={5}
             py='4rem'
             borderTopRightRadius='6rem'
+            mt='5rem'
         >
             <Image src='/logo.svg' mb='1.5rem' />
             <FooterList

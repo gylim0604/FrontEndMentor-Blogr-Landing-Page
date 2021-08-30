@@ -4,16 +4,16 @@ import Nav from './Nav';
 const Header = () => {
     return (
         <Flex
-            // bgImage='/bg-pattern-intro.svg'
+            // need change linear gradient for desktop view
             bg='url("/bg-pattern-intro.svg") ,linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));'
-            bgPosition='top 35% left 30%'
+            bgPosition={{ sm: 'top 35% left 30%', md: 'top 50% right 90%' }}
             bgRepeat='no-repeat'
-            bgSize='300%'
+            bgSize={{ sm: '300%', md: '150%' }}
             flexDir='column'
             color='white'
             pb='5rem'
             pt='2.5rem'
-            px={5}
+            px={[5, '10%']}
             borderBottomLeftRadius='6rem'
         >
             <Nav />

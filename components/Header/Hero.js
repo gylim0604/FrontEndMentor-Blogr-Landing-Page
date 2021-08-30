@@ -14,21 +14,29 @@ function Hero() {
                 <Link
                     color='lightRed'
                     bg='white'
-                    px={3}
-                    py={2}
+                    py={[2, '.6rem']}
                     display='inline-block'
                     borderRadius='1.5rem'
                     mr={2}
+                    width='150px'
+                    _hover={{
+                        bg: 'whiteAlpha.500',
+                        color: 'white',
+                    }}
                 >
                     Start for Free
                 </Link>
                 <Link
                     border='1px solid white'
-                    px={3}
-                    py={2}
+                    py={[2, '.6rem']}
                     display='inline-block'
                     borderRadius='1.5rem'
                     ml={2}
+                    width='150px'
+                    _hover={{
+                        bg: 'white',
+                        color: 'lightRed',
+                    }}
                 >
                     Learn More
                 </Link>

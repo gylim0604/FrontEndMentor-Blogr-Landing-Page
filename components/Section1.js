@@ -4,7 +4,7 @@ import WhiteBg from './WhiteBg';
 
 function Section1() {
     return (
-        <Flex flexDir='column' px={5} textAlign='center'>
+        <Flex flexDir='column' px={5} textAlign='center' mt='4rem'>
             {/* <Heading>Designed for the future</Heading> */}
             <WhiteBg title='Designed for the future' />
             <Image
