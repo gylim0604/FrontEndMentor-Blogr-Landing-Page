@@ -1,18 +1,17 @@
-import {
-    Flex,
-    Image,
-    Menu,
-    MenuItem,
-    MenuList,
-    MenuButton,
-    HStack,
-    Link,
-    Box,
-} from '@chakra-ui/react';
+import { Flex, Image, HStack, Link, Box } from '@chakra-ui/react';
 import React from 'react';
+import { Close, Hamburger } from '../Icons';
+import IconLink from './IconLink';
 import NavMenuItemDesktop from './NavMenuItemDesktop';
+import { useState } from 'react';
 
 function Nav() {
+    // Testing mobile menu
+    const [state, setstate] = useState(false);
+    const toggleMobileMenu = () => {
+        setstate(!state);
+        alert(state);
+    };
     return (
         <Flex justifyContent='space-between' alignItems='center'>
             <Image h='1.5rem' src='/logo.svg' alt='blogr logo' />
@@ -22,12 +21,20 @@ function Nav() {
                 display={('block', 'none')}
                 alt='hamburger icon'
             />
+            <Box>
+                <IconLink
+                    icon={<Hamburger />}
+                    isVisible={true}
+                    onClick={toggleMobileMenu}
+                />
+                <IconLink icon={<Close />} onClick={() => alert('hello')} />
+            </Box>
             <Box
                 flexGrow='1'
-                display={['none', 'flex']}
+                display={{ base: 'none', md: 'flex' }}
                 justifyContent='space-between'
             >
-                <HStack ml='4rem' spacing='2rem' display={['none', 'flex']}>
+                <HStack ml='4rem' spacing='2rem'>
                     <NavMenuItemDesktop
                         title='Product'
                         items={[

@@ -15,16 +15,21 @@ function Section1() {
                 {/* <Heading>Designed for the future</Heading> */}
 
                 <Image
-                    src='/illustration-editor-desktop.svg'
+                    src='/illustration-editor-mobile.svg'
                     alt='illustration of editor'
-                    h='57rem'
+                    h={{ base: 'auto', md: '57rem' }}
                     w='auto'
                     position={{ base: 'inherit', md: 'absolute' }}
                     right='-16rem'
                     // transform='translateX(30%)'
                     top='32rem'
                 />
-                <Flex mt='3rem' flexDir='column' w='40rem' textAlign='left'>
+                <Flex
+                    mt='3rem'
+                    flexDir='column'
+                    w={{ base: 'auto', md: '40rem' }}
+                    textAlign={{ base: 'center', md: 'left' }}
+                >
                     <WhiteBg
                         title='Introducing an extensible editor'
                         text='Blogr features an exceedingly intuitive interface which lets you

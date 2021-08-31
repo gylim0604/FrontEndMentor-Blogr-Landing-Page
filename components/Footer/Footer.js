@@ -1,4 +1,4 @@
-import { Flex, Image } from '@chakra-ui/react';
+import { Flex, Image, Box } from '@chakra-ui/react';
 import React from 'react';
 import FooterList from './FooterList';
 
@@ -6,32 +6,43 @@ function Footer() {
     return (
         <Flex
             bg='vvDarkBlue'
-            flexDir='column'
-            alignItems='center'
-            px={5}
+            flexDir={{ base: 'column', md: 'row' }}
+            alignItems={{ base: 'center', md: 'start' }}
+            px={[5, '10%']}
             py='4rem'
             borderTopRightRadius='6rem'
             mt='5rem'
         >
-            <Image src='/logo.svg' mb='1.5rem' />
-            <FooterList
-                title='Product'
-                list={[
-                    'Overview',
-                    'Pricing',
-                    'Marketplace',
-                    'Features',
-                    'Integrations',
-                ]}
+            <Image
+                src='/logo.svg'
+                mb='1.5rem'
+                alt='blogr logo'
+                mt={{ md: '1.5rem' }}
             />
-            <FooterList
-                title='Company'
-                list={['About', 'Team', 'Blog', 'Careers']}
-            />
-            <FooterList
-                title='Connect'
-                list={['Contact', 'Newsletter', 'LinkedIn']}
-            />
+            <Box
+                d={{ md: 'flex' }}
+                w={{ md: '100%' }}
+                justifyContent={{ md: 'space-around' }}
+            >
+                <FooterList
+                    title='Product'
+                    list={[
+                        'Overview',
+                        'Pricing',
+                        'Marketplace',
+                        'Features',
+                        'Integrations',
+                    ]}
+                />
+                <FooterList
+                    title='Company'
+                    list={['About', 'Team', 'Blog', 'Careers']}
+                />
+                <FooterList
+                    title='Connect'
+                    list={['Contact', 'Newsletter', 'LinkedIn']}
+                />
+            </Box>
         </Flex>
     );
 }

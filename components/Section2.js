@@ -12,7 +12,7 @@ function Section2() {
                 md: 'url(/bg-pattern-circles.svg),linear-gradient(to right,hsl(237, 17%, 21%), hsl(237, 23%, 32%))',
             }}
             bgPosition={{
-                base: 'top 1250% left 50%',
+                base: 'top 270% left 50%',
                 md: 'top 100% left -45%',
             }}
             bgRepeat={{ base: 'no-repeat', md: 'no-repeat' }}
@@ -20,8 +20,8 @@ function Section2() {
             borderTopRightRadius='6rem'
             borderBottomLeftRadius='6rem'
             position='relative'
-            mt={{ base: '15rem', md: '0' }}
-            mb='5rem'
+            mt={{ base: '20rem', md: '0' }}
+            mb={{ base: '5rem', md: '20rem' }}
             pt={{ base: '12.5rem', md: '6rem' }}
             pb={{ base: '10rem', md: '6rem' }}
         >
