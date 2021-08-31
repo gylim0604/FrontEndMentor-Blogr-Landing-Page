@@ -10,6 +10,7 @@ import {
     Box,
 } from '@chakra-ui/react';
 import React from 'react';
+import NavMenuItemDesktop from './NavMenuItemDesktop';
 
 function Nav() {
     return (
@@ -27,55 +28,30 @@ function Nav() {
                 justifyContent='space-between'
             >
                 <HStack ml='4rem' spacing='2rem' display={['none', 'flex']}>
-                    <Menu placement='top'>
-                        <MenuButton
-                            _hover={{
-                                textDecoration: 'underline',
-                            }}
-                        >
-                            Product
-                        </MenuButton>
-                        <MenuList mt='1rem' color='black'>
-                            <MenuItem
-                                fontWeight='300'
-                                _hover={{ fontWeight: '900' }}
-                            >
-                                Overview
-                            </MenuItem>
-                            <MenuItem>Pricing</MenuItem>
-                            <MenuItem>Marketplace</MenuItem>
-                            <MenuItem>Features</MenuItem>
-                            <MenuItem>Integrations</MenuItem>
-                        </MenuList>
-                    </Menu>
-                    <Menu>
-                        <MenuButton
-                            _hover={{
-                                textDecoration: 'underline',
-                            }}
-                        >
-                            Company
-                        </MenuButton>
-                        <MenuList>
-                            <MenuItem>About</MenuItem>
-                            <MenuItem>Team</MenuItem>
-                            <MenuItem>Blog</MenuItem>
-                        </MenuList>
-                    </Menu>
-                    <Menu>
-                        <MenuButton
-                            _hover={{
-                                textDecoration: 'underline',
-                            }}
-                        >
-                            Connect
-                        </MenuButton>
-                        <MenuList>
-                            <MenuItem>Contact</MenuItem>
-                            <MenuItem>Newsletter</MenuItem>
-                            <MenuItem>LinkedIn</MenuItem>
-                        </MenuList>
-                    </Menu>
+                    <NavMenuItemDesktop
+                        title='Product'
+                        items={[
+                            'Overview',
+                            'Pricing',
+                            'Marketplace',
+                            'Features',
+                            'Integrations',
+                        ]}
+                    />
+                    <NavMenuItemDesktop
+                        title='Company'
+                        items={['About', 'Team', 'Blog']}
+                    />
+                    <NavMenuItemDesktop
+                        title='Connect'
+                        items={[
+                            'Contact',
+                            'Newsletter',
+                            'LinkedIn',
+                            'Features',
+                            'Integrations',
+                        ]}
+                    />
                 </HStack>
                 <HStack>
                     <Link mr='2rem'>Login</Link>

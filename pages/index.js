@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
@@ -7,7 +8,7 @@ import Section3 from '../components/Section3';
 
 export default function Home() {
     return (
-        <>
+        <Box>
             <Head>
                 <title>Create Next App</title>
                 <meta
@@ -21,6 +22,6 @@ export default function Home() {
             <Section2 />
             <Section3 />
             <Footer />
-        </>
+        </Box>
     );
 }

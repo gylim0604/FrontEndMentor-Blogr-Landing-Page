@@ -2,6 +2,14 @@ import { extendTheme } from '@chakra-ui/react';
 import { Fonts } from './Fonts';
 
 const customTheme = extendTheme({
+    styles: {
+        global: {
+            // styles for the `body`
+            body: {
+                overflowX: 'hidden',
+            },
+        },
+    },
     colors: {
         lightRed: 'hsl(356, 100%, 66%)',
         vLightRed: 'hsl(355, 100%, 74%)',
