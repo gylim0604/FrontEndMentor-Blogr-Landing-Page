@@ -13,7 +13,7 @@ const Header = () => {
             color='white'
             pb='5rem'
             pt='2.5rem'
-            px={[5, '10%']}
+            px={{ base: '8vw', md: '10%' }}
             borderBottomLeftRadius='6rem'
         >
             <Nav />

@@ -1,12 +1,8 @@
 import { Link } from '@chakra-ui/react';
 import React from 'react';
 
-function IconLink({ icon, onClick, isVisible }) {
-    return (
-        <Link onClick={onClick} d={!isVisible ? 'none' : 'block'}>
-            {icon}
-        </Link>
-    );
+function IconLink({ icon, onClick }) {
+    return <Link onClick={onClick}>{icon}</Link>;
 }
 
 export default IconLink;

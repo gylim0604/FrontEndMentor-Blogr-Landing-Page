@@ -5,7 +5,7 @@ import WhiteBg from './WhiteBg';
 function Section1() {
     return (
         <Box
-            px={[5, '10%']}
+            px={{ base: '8vw', md: '10%' }}
             mt={{ base: '4rem', md: '10rem' }}
             textAlign='center'
             maxW='1300px'

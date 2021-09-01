@@ -8,7 +8,7 @@ function Footer() {
             bg='vvDarkBlue'
             flexDir={{ base: 'column', md: 'row' }}
             alignItems={{ base: 'center', md: 'start' }}
-            px={[5, '10%']}
+            px={{ base: '8vw', md: '10%' }}
             py='4rem'
             borderTopRightRadius='6rem'
             mt='5rem'

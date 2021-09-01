@@ -5,7 +5,7 @@ function Section2() {
     return (
         <Flex
             flexDir='column'
-            px={[5, '10%']}
+            px={{ base: '8vw', md: '10%' }}
             textAlign='center'
             bg={{
                 base: 'url(/bg-pattern-circles.svg),linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%))',

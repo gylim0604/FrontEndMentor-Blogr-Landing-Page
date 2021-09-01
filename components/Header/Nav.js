@@ -1,16 +1,27 @@
-import { Flex, Image, HStack, Link, Box } from '@chakra-ui/react';
+import {
+    Flex,
+    Image,
+    HStack,
+    Link,
+    Box,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
+} from '@chakra-ui/react';
 import React from 'react';
 import { Close, Hamburger } from '../Icons';
 import IconLink from './IconLink';
 import NavMenuItemDesktop from './NavMenuItemDesktop';
 import { useState } from 'react';
+import NavMenuItemMobile from './NavMenuItemMobile';
 
 function Nav() {
     // Testing mobile menu
-    const [state, setstate] = useState(false);
+    const [active, setActive] = useState(false);
     const toggleMobileMenu = () => {
-        setstate(!state);
-        alert(state);
+        setActive(!active);
+        // alert(active);
     };
     return (
         <Flex justifyContent='space-between' alignItems='center'>
@@ -22,12 +33,71 @@ function Nav() {
                 alt='hamburger icon'
             />
             <Box>
-                <IconLink
-                    icon={<Hamburger />}
-                    isVisible={true}
-                    onClick={toggleMobileMenu}
-                />
-                <IconLink icon={<Close />} onClick={() => alert('hello')} />
+                {!active ? (
+                    <IconLink icon={<Hamburger />} onClick={toggleMobileMenu} />
+                ) : (
+                    <IconLink icon={<Close />} onClick={toggleMobileMenu} />
+                )}
+                {active ? (
+                    <Flex
+                        flexDir='column'
+                        pos='absolute'
+                        w='84vw'
+                        maxW='375px'
+                        bg='white'
+                        top='7rem'
+                        left='0'
+                        color='vDarkBlue'
+                        mx='8vw'
+                        textAlign='center'
+                        p='2rem'
+                        boxShadow='2xl'
+                        borderRadius='5px'
+                    >
+                        <NavMenuItemMobile
+                            title='Product'
+                            items={[
+                                'Overview',
+                                'Pricing',
+                                'Marketplace',
+                                'Features',
+                                'Integrations',
+                            ]}
+                        />
+                        <NavMenuItemMobile
+                            title='Company'
+                            items={['About', 'Team', 'Blog']}
+                        />
+                        <NavMenuItemMobile
+                            title='Connect'
+                            items={['Contact', 'Newsletter', 'LinkedIn']}
+                        />
+                        <hr />
+                        <Link
+                            py='.75rem'
+                            d='inline-block'
+                            alignSelf='center'
+                            width='150px'
+                            textAlign='center'
+                        >
+                            Login
+                        </Link>
+                        <Link
+                            bg='linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%))'
+                            color='white'
+                            py='.75rem'
+                            d='inline-block'
+                            alignSelf='center'
+                            borderRadius='1.5rem'
+                            width='150px'
+                            textAlign='center'
+                        >
+                            Sign Up
+                        </Link>
+                    </Flex>
+                ) : (
+                    ''
+                )}
             </Box>
             <Box
                 flexGrow='1'
@@ -51,13 +121,7 @@ function Nav() {
                     />
                     <NavMenuItemDesktop
                         title='Connect'
-                        items={[
-                            'Contact',
-                            'Newsletter',
-                            'LinkedIn',
-                            'Features',
-                            'Integrations',
-                        ]}
+                        items={['Contact', 'Newsletter', 'LinkedIn']}
                     />
                 </HStack>
                 <HStack>
