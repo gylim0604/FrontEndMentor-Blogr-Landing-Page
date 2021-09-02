@@ -1,27 +1,23 @@
-import { Box, Flex, HStack, Link, Text } from '@chakra-ui/react';
+import { Box, Collapse, Flex, HStack, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 import { useState } from 'react';
 import { ArrowDownDark } from '../Icons';
 
-function NavMenuItemMobile({ title, items }) {
-    const [active, setActive] = useState(false);
-    const toggleSubMenu = () => {
-        setActive(!active);
-    };
+function NavMenuItemMobile({ title, items, isOpen, onClick }) {
     return (
         <Box my={1}>
             <Link
                 d='inline-block'
-                onClick={toggleSubMenu}
+                onClick={onClick}
                 my={2}
                 _hover={{ textDecoration: 'none' }}
             >
-                <HStack as='span' d='flex' alignItems='baseline'>
+                <HStack as='span' d='flex' alignItems='center'>
                     <Text>{title}</Text>
-                    <ArrowDownDark />
+                    <ArrowDownDark flip={isOpen} />
                 </HStack>
             </Link>
-            {active ? (
+            <Collapse in={isOpen} animateOpacity>
                 <Flex
                     flexDir='column'
                     bg='grayBlue'
@@ -42,9 +38,7 @@ function NavMenuItemMobile({ title, items }) {
                         );
                     })}
                 </Flex>
-            ) : (
-                ''
-            )}
+            </Collapse>
         </Box>
     );
 }

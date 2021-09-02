@@ -1,19 +1,27 @@
 import React from 'react';
 import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/menu';
 import { ArrowDownLight } from '../Icons';
-import { Image, HStack, Text } from '@chakra-ui/react';
+import { HStack, Text } from '@chakra-ui/react';
+import { useState } from 'react';
 function NavMenuItemDesktop({ title, items }) {
+    const [active, setActive] = useState(false);
+    const toggleMenu = () => {
+        setActive(!active);
+    };
     return (
-        <Menu placement='top'>
+        <Menu
+            placement='top'
+            onOpen={() => toggleMenu()}
+            onClose={() => toggleMenu()}
+        >
             <MenuButton
                 _hover={{
                     textDecoration: 'underline',
-                    // transform: 'rotate(180deg)',
                 }}
             >
                 <HStack alignItems='baseline'>
                     <Text>{title}</Text>
-                    <ArrowDownLight />
+                    <ArrowDownLight flip={active} />
                 </HStack>
             </MenuButton>
 

@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
 
-export function ArrowDownLight() {
+export function ArrowDownLight({ flip }) {
     return (
         <Box
             as='svg'
@@ -13,13 +13,15 @@ export function ArrowDownLight() {
             stroke='#FFF'
             strokeWidth='2'
             opacity='.75'
+            transform={flip ? 'rotateX(180deg)' : ''}
+            transition='all 0.25s ease-out'
         >
             <path d='M1 1l4 4 4-4' />
         </Box>
     );
 }
 
-export function ArrowDownDark() {
+export function ArrowDownDark({ flip }) {
     return (
         <Box
             as='svg'
@@ -31,6 +33,8 @@ export function ArrowDownDark() {
             stroke='#FF7B86'
             strokeWidth='2'
             opacity='.75'
+            transform={flip ? 'rotateX(180deg)' : ''}
+            transition='all 0.25s ease-out'
         >
             <path d='M1 1l4 4 4-4' />
         </Box>
