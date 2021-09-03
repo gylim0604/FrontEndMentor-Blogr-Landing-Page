@@ -1,11 +1,12 @@
 import { Flex, Heading, Image, Text } from '@chakra-ui/react';
 import React from 'react';
+import WidthWrapper from './WidthWrapper';
 
 function Section2() {
     return (
         <Flex
             flexDir='column'
-            px={{ base: '8vw', md: '10%' }}
+            px={{ base: '8vw', md: '10rem' }}
             textAlign='center'
             bg={{
                 base: 'url(/bg-pattern-circles.svg),linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%))',
@@ -20,10 +21,11 @@ function Section2() {
             borderTopRightRadius='6rem'
             borderBottomLeftRadius='6rem'
             position='relative'
-            mt={{ base: '20rem', md: '0' }}
-            mb={{ base: '5rem', md: '20rem' }}
+            mt={{ base: '30rem', md: '0' }}
+            mb={{ base: '5rem', md: '10rem' }}
             pt={{ base: '12.5rem', md: '6rem' }}
             pb={{ base: '10rem', md: '6rem' }}
+            w='100%'
         >
             <Image
                 position='absolute'

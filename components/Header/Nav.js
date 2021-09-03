@@ -28,7 +28,7 @@ function Nav() {
                 ) : (
                     <IconLink icon={<Close />} onClick={toggleMobileMenu} />
                 )}
-                {/* {active ? <MobileMenu /> : ''} */}
+                {active ? <MobileMenu /> : ''}
                 {/* <MobileMenu /> */}
             </Box>
             {/* Desktop Menu */}

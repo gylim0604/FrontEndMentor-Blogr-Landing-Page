@@ -7,6 +7,7 @@ const customTheme = extendTheme({
             // styles for the `body`
             body: {
                 overflowX: 'hidden',
+                boxSizing: 'border-box',
             },
         },
     },

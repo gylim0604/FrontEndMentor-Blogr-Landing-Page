@@ -5,29 +5,32 @@ import WhiteBg from './WhiteBg';
 function Section1() {
     return (
         <Box
-            px={{ base: '8vw', md: '10%' }}
+            px={{ base: '8vw', md: '10rem' }}
             mt={{ base: '4rem', md: '10rem' }}
             textAlign='center'
-            maxW='1300px'
         >
             <WhiteBg title='Designed for the future' />
-            <Flex flexDir={{ base: 'column', md: 'row' }} h='60rem'>
-                {/* <Heading>Designed for the future</Heading> */}
-
+            <Flex
+                flexDir={{ base: 'column', md: 'row' }}
+                h='50rem'
+                position={{ base: 'inherit', md: 'relative' }}
+            >
                 <Image
+                    // src='/illustration-editor-desktop.svg'
                     src='/illustration-editor-mobile.svg'
                     alt='illustration of editor'
-                    h={{ base: 'auto', md: '57rem' }}
-                    w='auto'
+                    h={{ md: '57rem' }}
+                    // w='auto'
                     position={{ base: 'inherit', md: 'absolute' }}
-                    right='-16rem'
-                    // transform='translateX(30%)'
-                    top='32rem'
+                    right='0'
+                    top='-11rem'
+                    transform={{ md: 'translateX(44%)' }}
                 />
                 <Flex
+                    mr={{ base: '0', md: '650px' }}
                     mt='3rem'
                     flexDir='column'
-                    w={{ base: 'auto', md: '40rem' }}
+                    w={{ md: '40rem' }}
                     textAlign={{ base: 'center', md: 'left' }}
                 >
                     <WhiteBg
@@ -38,6 +41,7 @@ function Section1() {
             embeds such as images, videos, and Markdown. Extensibility with
             plugins and themes provide easy ways to add functionality or
             change the looks of a blog.'
+                        headingSize='1.75rem'
                     />
                     <WhiteBg
                         title='Robust content management'
@@ -45,6 +49,7 @@ function Section1() {
                 posts. Increase the usability of your blog by adding customized
                 categories, sections, format, or flow. With this functionality,
                 you’re in full control.'
+                        headingSize='1.75rem'
                     />
                 </Flex>
             </Flex>
