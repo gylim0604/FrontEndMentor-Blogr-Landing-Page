@@ -4,10 +4,21 @@ import React from 'react';
 function Hero() {
     return (
         <Flex mt='5rem' flexDir='column' alignItems='center' textAlign='center'>
-            <Heading as='h1' lineHeight='2.5rem' my={5}>
+            <Heading
+                as='h1'
+                lineHeight='2.5rem'
+                my={5}
+                fontFamily='Overpass'
+                fontWeight='600'
+            >
                 A modern publishing platform
             </Heading>
-            <Heading as='h3' fontSize='sm'>
+            <Heading
+                as='h3'
+                fontSize='sm'
+                fontFamily='Overpass'
+                fontWeight='300'
+            >
                 Grow your audience and build your online brand
             </Heading>
             <Box mt='3rem'>

@@ -9,7 +9,7 @@ function Footer() {
                 flexDir={{ base: 'column', md: 'row' }}
                 alignItems={{ base: 'center', md: 'start' }}
                 py='4rem'
-                maxW='1519px'
+                maxW='1600px'
                 w='100%'
                 px={{ base: '8vw', md: '10rem' }}
                 justifyContent='center'
@@ -20,7 +20,6 @@ function Footer() {
                     mb='1.5rem'
                     alt='blogr logo'
                     mt={{ md: '1.5rem' }}
-                    // mx={{ base: 'auto', md: 'inherit' }}
                 />
                 <Box
                     d={{ md: 'flex' }}

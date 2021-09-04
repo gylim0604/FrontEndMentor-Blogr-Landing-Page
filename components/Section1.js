@@ -1,4 +1,4 @@
-import { Flex, Box, Image, Text } from '@chakra-ui/react';
+import { Flex, Box, Img, Text } from '@chakra-ui/react';
 import React from 'react';
 import WhiteBg from './WhiteBg';
 
@@ -15,17 +15,22 @@ function Section1() {
                 h='50rem'
                 position={{ base: 'inherit', md: 'relative' }}
             >
-                <Image
-                    // src='/illustration-editor-desktop.svg'
-                    src='/illustration-editor-mobile.svg'
-                    alt='illustration of editor'
-                    h={{ md: '57rem' }}
-                    // w='auto'
-                    position={{ base: 'inherit', md: 'absolute' }}
-                    right='0'
-                    top='-11rem'
-                    transform={{ md: 'translateX(44%)' }}
-                />
+                <Box as='picture'>
+                    <Box
+                        as='source'
+                        media='(min-width: 720px)'
+                        srcSet='/illustration-editor-desktop.svg'
+                    />
+                    <Img
+                        src='/illustration-editor-mobile.svg'
+                        alt='illustration of editor'
+                        h={{ md: '57rem' }}
+                        position={{ base: 'inherit', md: 'absolute' }}
+                        right='0'
+                        top='-11rem'
+                        transform={{ md: 'translateX(44%)' }}
+                    />
+                </Box>
                 <Flex
                     mr={{ base: '0', md: '650px' }}
                     mt='3rem'

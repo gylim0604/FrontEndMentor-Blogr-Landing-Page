@@ -16,7 +16,7 @@ const Header = () => {
             w='100%'
             justifyContent='center'
         >
-            <Box maxW='1519px' w='100%' px={{ base: '8vw', md: '10rem' }}>
+            <Box maxW='1600px' w='100%' px={{ base: '8vw', md: '10rem' }}>
                 <Nav />
                 <Hero />
             </Box>

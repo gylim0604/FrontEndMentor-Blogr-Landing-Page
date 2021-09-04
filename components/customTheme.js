@@ -1,5 +1,4 @@
 import { extendTheme } from '@chakra-ui/react';
-import { Fonts } from './Fonts';
 
 const customTheme = extendTheme({
     styles: {
@@ -20,11 +19,7 @@ const customTheme = extendTheme({
         vGrayBlue: ' hsl(207, 13%, 34%)',
         vvDarkBlue: 'hsl(240, 10%, 16%)',
     },
-    fonts: {
-        // heading: 'Julius Sans One',
-        heading: 'Ubuntu',
-        body: 'Ubuntu',
-    },
+    // fonts: {},
 });
 
 export default customTheme;

@@ -25,7 +25,7 @@ function Section2() {
             justifyContent='center'
         >
             <Box
-                maxW='1519px'
+                maxW='1600px'
                 w='100%'
                 px={{ base: '8vw', md: '10rem' }}
                 position='relative'

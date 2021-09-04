@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Img, Text } from '@chakra-ui/react';
 import WhiteBg from './WhiteBg';
 
 function Section3() {
@@ -14,16 +14,23 @@ function Section3() {
                 flexDir={{ base: 'column', md: 'row' }}
                 position={{ base: 'inherit', md: 'relative' }}
             >
-                <Image
-                    src='/illustration-laptop-mobile.svg'
-                    // src='/illustration-laptop-desktop.svg'
-                    alt='illustration of a laptop'
-                    h={{ md: '50rem' }}
-                    position={{ md: 'absolute' }}
-                    left='0'
-                    transform={{ md: 'translateX(-44%)' }}
-                    top='-8rem'
-                />
+                <Box as='picture'>
+                    <Box
+                        as='source'
+                        media='(min-width: 720px)'
+                        srcSet='/illustration-laptop-desktop.svg'
+                    />
+                    <Img
+                        src='/illustration-laptop-mobile.svg'
+                        alt='illustration of a laptop'
+                        h={{ md: '50rem' }}
+                        position={{ md: 'absolute' }}
+                        left={{ md: '0' }}
+                        transform={{ md: 'translateX(-44%)' }}
+                        top={{ md: '-8rem' }}
+                    />
+                </Box>
+
                 <Flex
                     ml={{ base: '0', md: '650px' }}
                     mt='4rem'
