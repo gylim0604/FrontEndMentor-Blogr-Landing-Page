@@ -6,8 +6,8 @@ function Section3() {
     return (
         <Box
             px={{ base: '8vw', md: '10rem' }}
-            mt={{ base: '4rem', md: '10rem' }}
-            my={{ base: '0', md: '5rem' }}
+            // mt={{ base: '4rem', md: '10rem' }}
+            my={{ base: '0', md: '10rem' }}
             textAlign='center'
         >
             <Flex
