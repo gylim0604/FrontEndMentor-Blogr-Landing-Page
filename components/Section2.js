@@ -10,7 +10,7 @@ function Section2() {
                 md: 'url(/bg-pattern-circles.svg),linear-gradient(to right,hsl(237, 17%, 21%), hsl(237, 23%, 32%))',
             }}
             bgPosition={{
-                base: 'bottom -300% left 50%',
+                base: 'top -15rem left 50%, center',
                 md: 'bottom 20% left -45%',
             }}
             bgRepeat={{ base: 'no-repeat', md: 'no-repeat' }}

@@ -38,7 +38,7 @@ function Hero() {
                     display='inline-block'
                     borderRadius='1.5rem'
                     mr={2}
-                    width='150px'
+                    width={{ base: '130px', md: '150px' }}
                     _hover={{
                         bg: 'whiteAlpha.500',
                         color: 'white',
@@ -54,7 +54,7 @@ function Hero() {
                     display='inline-block'
                     borderRadius='1.5rem'
                     ml={2}
-                    width='150px'
+                    width={{ base: '130px', md: '150px' }}
                     _hover={{
                         bg: 'white',
                         color: 'lightRed',
