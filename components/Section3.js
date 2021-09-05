@@ -17,7 +17,7 @@ function Section3() {
                 <Box as='picture'>
                     <Box
                         as='source'
-                        media='(min-width: 720px)'
+                        media='(min-width: 1400px)'
                         srcSet='/illustration-laptop-desktop.svg'
                     />
                     <Img
@@ -28,6 +28,7 @@ function Section3() {
                         left={{ md: '0' }}
                         transform={{ md: 'translateX(-40%)' }}
                         top={{ md: '-8rem' }}
+                        mx='auto'
                     />
                 </Box>
 

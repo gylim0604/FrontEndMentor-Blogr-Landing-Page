@@ -12,7 +12,7 @@ function MobileMenu() {
             flexDir='column'
             pos='absolute'
             w='84vw'
-            maxW='375px'
+            // maxW='375px'
             bg='white'
             top='7rem'
             left='0'

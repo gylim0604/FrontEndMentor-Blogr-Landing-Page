@@ -21,7 +21,7 @@ function Section1() {
                 <Box as='picture'>
                     <Box
                         as='source'
-                        media='(min-width: 720px)'
+                        media='(min-width: 1400px)'
                         srcSet='/illustration-editor-desktop.svg'
                     />
                     <Img
@@ -29,9 +29,10 @@ function Section1() {
                         alt='illustration of editor'
                         h={{ md: '57rem' }}
                         position={{ base: 'inherit', md: 'absolute' }}
-                        right='0'
+                        right={{ md: '0' }}
                         top='-11rem'
                         transform={{ md: 'translateX(40%)' }}
+                        mx='auto'
                     />
                 </Box>
                 <Flex
