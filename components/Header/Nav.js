@@ -14,14 +14,17 @@ function Nav() {
     };
     return (
         <Flex justifyContent='space-between' alignItems='center'>
-            <Image h='1.5rem' src='/logo.svg' alt='blogr logo' />
+            <Image
+                h={{ base: '1.5rem', md: '2.25rem' }}
+                src='/logo.svg'
+                alt='blogr logo'
+            />
             <Image
                 h='1rem'
                 src='/icon-hamburger.svg'
                 display={('block', 'none')}
                 alt='hamburger icon'
             />
-            {/* Mobile Menu */}
             <Box d={{ md: 'none' }}>
                 {!active ? (
                     <IconLink icon={<Hamburger />} onClick={toggleMobileMenu} />
@@ -29,7 +32,6 @@ function Nav() {
                     <IconLink icon={<Close />} onClick={toggleMobileMenu} />
                 )}
                 {active ? <MobileMenu /> : ''}
-                {/* <MobileMenu /> */}
             </Box>
             {/* Desktop Menu */}
             <Box
@@ -58,7 +60,14 @@ function Nav() {
                     />
                 </HStack>
                 <HStack>
-                    <Link mr='2rem'>Login</Link>
+                    <Link
+                        mr='2rem'
+                        fontFamily='Ubuntu'
+                        fontWeight='700'
+                        color='whiteAlpha.800'
+                    >
+                        Login
+                    </Link>
                     <Link
                         _hover={{
                             bg: 'whiteAlpha.500',
@@ -71,6 +80,8 @@ function Nav() {
                         borderRadius='1.5rem'
                         width='150px'
                         textAlign='center'
+                        fontFamily='Ubuntu'
+                        fontWeight='700'
                     >
                         Sign Up
                     </Link>

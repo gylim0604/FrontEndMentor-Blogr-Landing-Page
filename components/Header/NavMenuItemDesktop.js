@@ -20,18 +20,21 @@ function NavMenuItemDesktop({ title, items }) {
                 }}
             >
                 <HStack alignItems='baseline'>
-                    <Text>{title}</Text>
+                    <Text color='whiteAlpha.800'>{title}</Text>
                     <ArrowDownLight flip={active} />
                 </HStack>
             </MenuButton>
 
-            <MenuList mt='1rem' color='black'>
+            <MenuList minWidth='175px' mt='1rem' color='black' py='1rem'>
                 {items.map((item, idx) => {
                     return (
                         <MenuItem
+                            w='50px'
+                            px='2rem'
                             key={idx}
-                            fontWeight='300'
-                            _hover={{ fontWeight: '900', bg: 'transparent' }}
+                            fontWeight='00'
+                            _hover={{ fontWeight: '600', bg: 'transparent' }}
+                            _focus={{ bg: 'transparent' }}
                         >
                             {item}
                         </MenuItem>

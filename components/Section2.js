@@ -10,19 +10,21 @@ function Section2() {
                 md: 'url(/bg-pattern-circles.svg),linear-gradient(to right,hsl(237, 17%, 21%), hsl(237, 23%, 32%))',
             }}
             bgPosition={{
-                base: 'top 270% left 50%',
-                md: 'top 100% left -45%',
+                base: 'bottom -300% left 50%',
+                md: 'bottom 20% left -45%',
             }}
             bgRepeat={{ base: 'no-repeat', md: 'no-repeat' }}
-            bgSize='160%'
+            bgSize={{ base: '160%', md: '70%, auto' }}
             borderTopRightRadius='6rem'
             borderBottomLeftRadius='6rem'
             mt={{ base: '30rem', md: '0' }}
-            mb={{ base: '5rem', md: '10rem' }}
+            mb={{ base: '5rem', md: '8rem' }}
             pt={{ base: '12.5rem', md: '6rem' }}
             pb={{ base: '10rem', md: '6rem' }}
             w='100%'
             justifyContent='center'
+            alignItems={{ md: 'center' }}
+            h={{ base: '600px', md: '400px' }}
         >
             <Box
                 maxW='1600px'
@@ -34,7 +36,7 @@ function Section2() {
                     position='absolute'
                     src='/illustration-phones.svg'
                     alt='illustration of mobile phone with blogr template'
-                    top={{ base: '-25rem', md: '-160px' }}
+                    top={{ base: '-25rem', md: '-185px' }}
                     left={{ base: '50%', md: '120px' }}
                     h={{ base: 'auto', md: '570px' }}
                     w={{ base: '375px', md: 'auto' }}
@@ -44,13 +46,12 @@ function Section2() {
                     flexDir='column'
                     textAlign={{ base: 'center', md: 'left' }}
                     color='white'
-                    // w={{ base: 'auto', md: '}
                     ml={{ base: '0', md: '650px' }}
                 >
-                    <Heading mb={{ base: '0', md: '2rem' }}>
+                    <Heading mb={{ base: '1rem' }} fontSize='2.5rem'>
                         State of the Art Infrastructure
                     </Heading>
-                    <Text lineHeight={{ md: '2rem' }}>
+                    <Text lineHeight={{ base: '2rem' }}>
                         With reliability and speed in mind, worldwide data
                         centers provide the backbone for ultra-fast
                         connectivity. This ensures your site will load

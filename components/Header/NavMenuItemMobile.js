@@ -13,14 +13,19 @@ function NavMenuItemMobile({ title, items, isOpen, onClick }) {
                 _hover={{ textDecoration: 'none' }}
             >
                 <HStack as='span' d='flex' alignItems='center'>
-                    <Text>{title}</Text>
+                    <Text
+                        fontWeight='600'
+                        color={isOpen ? 'hsl(240, 2%,45%)' : ''}
+                    >
+                        {title}
+                    </Text>
                     <ArrowDownDark flip={isOpen} />
                 </HStack>
             </Link>
             <Collapse in={isOpen} animateOpacity>
                 <Flex
                     flexDir='column'
-                    bg='grayBlue'
+                    bg=' hsl(240, 2%, 90%)'
                     borderRadius='2px'
                     mt='1rem'
                     py={4}
@@ -30,8 +35,9 @@ function NavMenuItemMobile({ title, items, isOpen, onClick }) {
                             <Link
                                 key={idx}
                                 _hover={{ textDecoration: 'none' }}
-                                color='vGrayBlue'
+                                color='hsl(240, 2%,45%)'
                                 my={1}
+                                fontWeight='600'
                             >
                                 {item}
                             </Link>

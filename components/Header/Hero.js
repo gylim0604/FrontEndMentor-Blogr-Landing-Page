@@ -3,11 +3,19 @@ import React from 'react';
 
 function Hero() {
     return (
-        <Flex mt='5rem' flexDir='column' alignItems='center' textAlign='center'>
+        <Flex
+            mt='5rem'
+            flexDir='column'
+            alignItems='center'
+            textAlign='center'
+            mb={{ md: '5rem' }}
+        >
             <Heading
                 as='h1'
                 lineHeight='2.5rem'
-                my={5}
+                my={{ base: 5, md: '5rem' }}
+                mb={{ base: '2rem', md: '1.5rem' }}
+                fontSize={{ base: '2.4rem', md: '4rem' }}
                 fontFamily='Overpass'
                 fontWeight='600'
             >
@@ -15,9 +23,10 @@ function Hero() {
             </Heading>
             <Heading
                 as='h3'
-                fontSize='sm'
+                fontSize='1.25rem'
                 fontFamily='Overpass'
                 fontWeight='300'
+                color='whiteAlpha.800'
             >
                 Grow your audience and build your online brand
             </Heading>
@@ -34,6 +43,8 @@ function Hero() {
                         bg: 'whiteAlpha.500',
                         color: 'white',
                     }}
+                    fontFamily='Ubuntu'
+                    fontWeight='700'
                 >
                     Start for Free
                 </Link>
@@ -48,6 +59,8 @@ function Hero() {
                         bg: 'white',
                         color: 'lightRed',
                     }}
+                    fontFamily='Ubuntu'
+                    fontWeight='700'
                 >
                     Learn More
                 </Link>

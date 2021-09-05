@@ -7,6 +7,8 @@ const customTheme = extendTheme({
             body: {
                 overflowX: 'hidden',
                 boxSizing: 'border-box',
+                fontSize: '16px',
+                fontWeight: '300',
             },
         },
     },
@@ -19,7 +21,10 @@ const customTheme = extendTheme({
         vGrayBlue: ' hsl(207, 13%, 34%)',
         vvDarkBlue: 'hsl(240, 10%, 16%)',
     },
-    // fonts: {},
+    fonts: {
+        heading: 'Overpass',
+        body: 'Overpass',
+    },
 });
 
 export default customTheme;

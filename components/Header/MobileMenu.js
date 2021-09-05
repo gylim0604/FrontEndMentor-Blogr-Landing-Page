@@ -48,7 +48,7 @@ function MobileMenu() {
                 onClick={() => toggleSubMenu('Connect')}
                 isOpen={dropDown === 'Connect'}
             />
-            <hr />
+            <hr style={{ marginTop: '1rem' }} />
             <Link
                 py='.75rem'
                 d='inline-block'

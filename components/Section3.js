@@ -26,7 +26,7 @@ function Section3() {
                         h={{ md: '50rem' }}
                         position={{ md: 'absolute' }}
                         left={{ md: '0' }}
-                        transform={{ md: 'translateX(-44%)' }}
+                        transform={{ md: 'translateX(-40%)' }}
                         top={{ md: '-8rem' }}
                     />
                 </Box>

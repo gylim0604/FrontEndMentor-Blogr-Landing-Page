@@ -3,11 +3,21 @@ import React from 'react';
 
 function FooterList({ title, list }) {
     return (
-        <Flex flexDir='column' textAlign={{ base: 'center', md: 'left' }}>
-            <Heading color='white' as='h3' size='sm' my='1.5rem'>
+        <Flex
+            flexDir='column'
+            textAlign={{ base: 'center', md: 'left' }}
+            fontFamily='Ubuntu'
+        >
+            <Heading
+                color='white'
+                as='h3'
+                size='sm'
+                my='1.5rem'
+                fontWeight='700'
+            >
                 {title}
             </Heading>
-            <UnorderedList color='grayBlue' styleType='none' mx='0'>
+            <UnorderedList color='grayBlue' styleType='none' mx='0' mb='1rem'>
                 {list.map((item, idx) => (
                     <ListItem
                         key={idx}
@@ -15,6 +25,8 @@ function FooterList({ title, list }) {
                             textDecoration: 'underline',
                             cursor: 'pointer',
                         }}
+                        my={{ base: '.5rem' }}
+                        fontWeight='400'
                     >
                         {item}
                     </ListItem>

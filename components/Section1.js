@@ -1,4 +1,4 @@
-import { Flex, Box, Img, Text } from '@chakra-ui/react';
+import { Flex, Box, Img } from '@chakra-ui/react';
 import React from 'react';
 import WhiteBg from './WhiteBg';
 
@@ -9,7 +9,10 @@ function Section1() {
             mt={{ base: '4rem', md: '10rem' }}
             textAlign='center'
         >
-            <WhiteBg title='Designed for the future' />
+            <WhiteBg
+                title='Designed for the future'
+                headingSize={{ base: '2rem', md: '2.5rem' }}
+            />
             <Flex
                 flexDir={{ base: 'column', md: 'row' }}
                 h='50rem'
@@ -28,7 +31,7 @@ function Section1() {
                         position={{ base: 'inherit', md: 'absolute' }}
                         right='0'
                         top='-11rem'
-                        transform={{ md: 'translateX(44%)' }}
+                        transform={{ md: 'translateX(40%)' }}
                     />
                 </Box>
                 <Flex
